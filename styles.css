@@ -94,3 +94,26 @@ p{line-height:1.6;color:var(--muted)}
   .nav-links a{margin:0}
   .nav-links.open{display:flex}
 }
+
+
+ /* Extra styling for social icons */
+    .socials {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1rem;
+    }
+    .socials a {
+      color: #333;
+      transition: color 0.3s ease;
+       font-size: 2rem;
+       text-decoration: none;
+    }
+    .socials a:hover {
+      color: #0077b5; /* default hover blue */
+    }
+    .socials a[aria-label="Instagram"]:hover { color: #E1306C; }
+    .socials a[aria-label="Telegram"]:hover { color: #0088cc; }
+    .socials a[aria-label="WhatsApp"]:hover { color: #25D366; }
+    .socials a[aria-label="GitHub"]:hover { color: #333; }
+    .socials a[aria-label="LinkedIn"]:hover { color: #0077b5; }
+    .socials a[aria-label="Email"]:hover { color: #EA4335; }
