@@ -364,6 +364,17 @@ p {
   .nav-links.open {
     display: flex
   }
+
+  /* Mobile screenshot layout - stack text below image */
+  .screenshot-item {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .screenshot-item img {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 
