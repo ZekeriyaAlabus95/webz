@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RJ Z translator — Telegram Bot</title>
+  <meta name="description" content="RJ Z translator is a Telegram bot for instant translations, orchestrated with n8n. Freelance automation project." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html"><span>RJ</span> Z</a>
+      <button class="nav-toggle" aria-label="Open Menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding:40px 0 70px;">
+    <h1>RJ Z translator</h1>
+    <p class="subtitle">Telegram bot for fast, reliable translations. Built and orchestrated with n8n as a freelance automation project.</p>
+    <div class="screenshot-grid">
+      <figure>
+        <img src="RJZtranslator/rjztranslator.png" alt="RJ Z translator bot preview" style="width:420px;border-radius:12px;box-shadow:var(--shadow);" />
+        <figcaption>
+          The bot accepts messages in various languages and returns translations quickly. It is powered by n8n workflows for flexible routing, logging, and rate limiting. 
+          can be used for translating messages in any language.
+          it is running on a customized raspberry pi4. so, it has some delay in response.
+        </figcaption>
+      </figure>
+    </div>
+
+    <div style="margin-top:24px;display:flex;gap:12px;align-items:center;">
+      <a class="btn" href="https://t.me/zax95rjzbot" target="_blank" rel="noopener" aria-label="Open RJ Z translator on Telegram">Open in Telegram</a>
+      <a class="btn ghost" href="index.html#projects">Back to Projects</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Zakariya Alabous</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+

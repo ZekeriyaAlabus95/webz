@@ -1,12 +1,22 @@
 /* ====== Base ====== */
 :root {
+  /* Light theme (used when [data-theme="light"]) */
+  --bg: #0b0b10;
+  --text: #f2f3f5;
+  --muted: #b1b6c6;
+  --brand: #5b6cff;
+  --card: #14151c;
+  --shadow: 0 10px 30px rgba(0, 0, 0, .45);
+  --radius: 18px;
+}
+
+[data-theme="light"] {
   --bg: #ffffff;
   --text: #1a1a1a;
   --muted: #6b7280;
   --brand: #5b6cff;
   --card: #f6f7fb;
   --shadow: 0 10px 30px rgba(10, 10, 10, .07);
-  --radius: 18px;
 }
 
 * {
@@ -74,10 +84,10 @@ p {
 .site-header {
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, .8);
+  background: color-mix(in oklab, var(--bg) 80%, transparent);
   backdrop-filter: saturate(120%) blur(8px);
   z-index: 10;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba(127,127,127,.18);
 }
 
 .nav {
@@ -90,16 +100,20 @@ p {
 .logo {
   font-weight: 800;
   text-decoration: none;
-  color: var(--text);
+  color: #fff;
   letter-spacing: .5px
 }
 
 .logo span {
-  background: var(--text);
+  background: #000;
   color: #fff;
   padding: 2px 6px;
   border-radius: 8px;
   margin-right: 6px
+}
+
+[data-theme="light"] .logo {
+  color: #000;
 }
 
 .nav-links a {
@@ -149,7 +163,7 @@ p {
   position: absolute;
   inset: auto 0 0 0;
   height: 78%;
-  background: #2f2a2a;
+  background: #2a2d3a;
   border-radius: 24px 24px 0 0;
   transform: skewY(-6deg);
   z-index: -1;
@@ -307,9 +321,33 @@ p {
 
 /* ====== Footer ====== */
 .site-footer {
-  border-top: 1px solid #eee;
+  border-top: 1px solid rgba(127,127,127,.18);
   padding: 20px 0;
   color: var(--muted)
+}
+
+/* ====== Theme toggle button ====== */
+.theme-toggle {
+  border: 0;
+  background: #000;
+  color: #fff;
+  height: 28px;
+  padding: 0 8px;
+  border-radius: 8px;
+  display: inline-grid;
+  place-items: center;
+  margin-left: 12px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  filter: brightness(1.05);
+}
+
+[data-theme="light"] .theme-toggle {
+  background: #000;
+  color: #fff;
 }
 
 .site-footer p {
@@ -347,8 +385,8 @@ p {
     position: absolute;
     right: 20px;
     top: 62px;
-    background: #fff;
-    border: 1px solid #eee;
+    background: var(--bg);
+    border: 1px solid rgba(127,127,127,.18);
     border-radius: 12px;
     padding: 10px 12px;
     display: none;
