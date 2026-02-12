@@ -521,4 +521,47 @@ p {
   margin-right: 6px;
 }
 
+/* ====== Education Card ====== */
+.education-card {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: var(--shadow);
+}
 
+.education-card h3 {
+  margin-top: 0;
+  color: var(--text);
+}
+
+.education-item p {
+  margin: 8px 0;
+}
+
+.muted-text {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ====== Contact Info ====== */
+.contact-info {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: var(--shadow);
+}
+
+.contact-info p {
+  margin: 12px 0;
+}
+
+.contact-info a {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
